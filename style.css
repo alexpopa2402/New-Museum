@@ -1,0 +1,46 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container holding all 4 sections */
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%; /* 2 columns */
+    grid-template-rows: 50% 50%; /* 2 rows */
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Style for each square */
+  .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Text color */
+  }
+  
+  /* Section-specific background colors */
+  #section1 {
+    background-color: red;
+  }
+  
+  #section2 {
+    background-color: blue;
+  }
+  
+  #section3 {
+    background-color: yellow;
+    color: black; /* Change text color for better readability */
+  }
+  
+  #section4 {
+    background-color: green;
+  }
+  
