@@ -49,7 +49,7 @@ html {
 }
 
 .square p {
-    font-size: clamp(2rem, 5vw, 7rem);
+    font-size: clamp(1.5rem, 5vw, 7rem);
     /* Minimum 2rem, maximum 7rem, scales with 5% of viewport width */
     white-space: nowrap;
     /* Prevent text wrapping */
