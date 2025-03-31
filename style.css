@@ -1,46 +1,113 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /*   outline: 1px solid lime;  */
+}
+
+* {
+    margin: 0;
+}
+
 /* Reset default margin and padding */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  /* Container holding all 4 sections */
-  .container {
+    font-family: 'Roboto', sans-serif;
+    /* Set Roboto as the default font */
+    overflow: hidden;
+    /* Prevent scrollbars from appearing */
+    font-weight: bold;
+}
+
+
+/* Container holding all 4 sections */
+.container {
     display: grid;
-    grid-template-columns: 50% 50%; /* 2 columns */
-    grid-template-rows: 50% 50%; /* 2 rows */
+    grid-template-columns: 50% 50%;
+    /* 2 columns */
+    grid-template-rows: 50% 50%;
+    /* 2 rows */
     width: 100vw;
     height: 100vh;
-  }
-  
-  /* Style for each square */
-  .square {
+}
+
+/* Style for each square */
+.square {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white; /* Text color */
-  }
-  
-  /* Section-specific background colors */
-  #section1 {
-    background-color: red;
-  }
-  
-  #section2 {
-    background-color: blue;
-  }
-  
-  #section3 {
-    background-color: yellow;
-    color: black; /* Change text color for better readability */
-  }
-  
-  #section4 {
-    background-color: green;
-  }
-  
+    color: white;
+    /* Text color */
+}
+
+.square p {
+    font-size: clamp(2rem, 5vw, 7rem);
+    /* Minimum 2rem, maximum 7rem, scales with 5% of viewport width */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+/* Section-specific background colors */
+#section1 {
+    background-color: #525dd3;
+}
+
+#section2 {
+    background-color: #8135b1;
+}
+
+#section3 {
+    background-color: #dd2b79;
+}
+
+#section4 {
+    background-color: #fdda76;
+}
+
+/* Add fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.square p {
+    opacity: 0; /* Start with invisible text */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+}
+
+/* Apply fade-in animation to each section's text */
+#section1 p {
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 0s; /* No delay for the first section */
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+
+#section2 p {
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 1s; /* 1-second delay for the second section */
+    animation-fill-mode: forwards;
+}
+
+#section3 p {
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 2s; /* 2-second delay for the third section */
+    animation-fill-mode: forwards;
+}
+
+#section4 p {
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 3s; /* 3-second delay for the fourth section */
+    animation-fill-mode: forwards;
+}
