@@ -58,18 +58,22 @@ html {
 /* Section-specific background colors */
 #section1 {
     background-color: #525dd3;
+    position: relative;
 }
 
 #section2 {
     background-color: #8135b1;
+    position: relative;
 }
 
 #section3 {
     background-color: #dd2b79;
+    position: relative;
 }
 
 #section4 {
     background-color: #fdda76;
+    position: relative;
 }
 
 /* Add fade-in animation */
@@ -77,37 +81,119 @@ html {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
 .square p {
-    opacity: 0; /* Start with invisible text */
-    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+    opacity: 0;
+    /* Start with invisible text */
+    transition: opacity 1s ease-in-out;
+    /* Smooth transition for opacity */
 }
 
 /* Apply fade-in animation to each section's text */
 #section1 p {
     animation: fadeIn 1s ease-in-out;
-    animation-delay: 0s; /* No delay for the first section */
-    animation-fill-mode: forwards; /* Keep the final state after animation */
+    animation-delay: 0s;
+    /* No delay for the first section */
+    animation-fill-mode: forwards;
+    /* Keep the final state after animation */
+    color: #FFEDBC;
 }
 
 #section2 p {
     animation: fadeIn 1s ease-in-out;
-    animation-delay: 1s; /* 1-second delay for the second section */
+    animation-delay: 1s;
+    /* 1-second delay for the second section */
     animation-fill-mode: forwards;
+    color: #FFEDBC;
 }
 
 #section3 p {
     animation: fadeIn 1s ease-in-out;
-    animation-delay: 2s; /* 2-second delay for the third section */
+    animation-delay: 2s;
+    /* 2-second delay for the third section */
     animation-fill-mode: forwards;
+    color: #FFEDBC;
 }
 
 #section4 p {
     animation: fadeIn 1s ease-in-out;
-    animation-delay: 3s; /* 3-second delay for the fourth section */
+    animation-delay: 3s;
     animation-fill-mode: forwards;
+    color: #8135b1;
+}
+
+/* Responsive font sizes for each section */
+#section1 .new {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    line-height: 1;
+    font-size: clamp(1.8rem, 6vw, 8rem);
+    color: #FFEDBC;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+#section3 .mus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: clamp(1.8rem, 6vw, 8rem);
+    line-height: 1;
+    color: #FFEDBC;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+#section4 .eum {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: clamp(1.8rem, 6vw, 8rem);
+    line-height: 1;
+    text-align: left;
+    color: #8135b1;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+
+.mus .byArt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #FFEDBC;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+
+.mus .by {
+    font-size: clamp(1rem, 3.4vw, 5rem);
+    line-height: 1;
+    text-align: left;
+    align-content: end;
+}
+
+.mus .byArt .art {
+    font-size: clamp(1.4rem, 4.5vw, 6rem);
+}
+
+.eum .safari {
+    line-height: 1;
+    font-size: clamp(1.4rem, 4.5vw, 6rem);
+    letter-spacing: -1px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
 }
