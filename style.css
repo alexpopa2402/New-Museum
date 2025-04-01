@@ -3,7 +3,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    /*   outline: 1px solid lime;  */
+/*       outline: 1px solid lime;  */
 }
 
 * {
@@ -20,9 +20,7 @@ html {
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    /* Set Roboto as the default font */
     overflow: hidden;
-    /* Prevent scrollbars from appearing */
     font-weight: bold;
 }
 
@@ -31,9 +29,7 @@ html {
 .container {
     display: grid;
     grid-template-columns: 50% 50%;
-    /* 2 columns */
     grid-template-rows: 50% 50%;
-    /* 2 rows */
     width: 100vw;
     height: 100vh;
 }
@@ -45,7 +41,6 @@ html {
     align-items: center;
     text-align: center;
     color: white;
-    /* Text color */
 }
 
 .square p {
