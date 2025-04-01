@@ -120,7 +120,7 @@ html {
     animation-delay: 3s;
     animation-fill-mode: forwards;
     color: #8135b1;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
 }
 
 /* Responsive font sizes for each section */
